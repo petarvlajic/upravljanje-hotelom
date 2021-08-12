@@ -1,0 +1,84 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,800;0,900;1,100;1,200&display=swap");
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Utility Classes*/
+a {
+    text-decoration: none;
+}
+
+input {
+    border: 1px solid grey;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+/*Utility Classes Custom*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.background {
+    background: url("https://i.pinimg.com/originals/96/e7/19/96e7194630d49b58dbeedc8126b0df1b.png");
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+td,
+th {
+    vertical-align: middle;
+}
+
+.pdl-4 {
+    margin-left: 10px;
+}
+
+.background-form {
+    background: linear-gradient(135deg, #616060 60%, #ececec);
+}
+
+.form-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.hero {
+    padding: 200px 0px;
+}
+
+.card img {
+    height: 100%;
+}
+
+/*Semantic Tags*/
+/*# sourceMappingURL=style.css.map */
