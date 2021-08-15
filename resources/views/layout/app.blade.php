@@ -18,11 +18,11 @@
 </head>
 
 <body>
-    <!--Header-->
-    <div class="background">
+    <div class="bg-primary">
+
         <div class="container">
             <!--Navbar-->
-            <nav class="navbar navbar-expand-lg text-white">
+            <nav class="navbar navbar-expand-lg text-white  ">
                 <a class="navbar-brand text-white" href="#">AG Hotel</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,86 +32,20 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link text-white active" href="#">Home <span
                                 class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link text-white" href="#">Features</a>
-                        <a class="nav-item nav-link text-white" href="#">Pricing</a>
-                        <a class="nav-item nav-link text-white disabled" href="#">Disabled</a>
+                        <a class="nav-item nav-link text-white" href="/login">Login</a>
+                        <a class="nav-item nav-link text-white" href="/register">Register</a>
+                        <form action="{{ route('logout')}}" method="post" class="inline p-3">
+                            @csrf
+
+                            <button type="submit">Logout</button>
+                        </form>
                     </div>
                 </div>
             </nav>
-            <!--Hero-->
-            <div class="hero jumbotron text-center text-white">
-                <h1 class="display-4">Dobro dosli u AG Hotel!</h1>
-                <p class="lead">
-                    Proverite najbolji kvalitet i tradiciju koja traje 20 godina!
-                </p>
-                <hr class="my-4" />
 
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Rezervisi odmah!</a>
-                </p>
-            </div>
         </div>
     </div>
-    <!--Landing-->
-    <div class="container">
-        <h2 class="text-center m-4">Nudimo vam</h2>
-        <hr class="my-4" />
-        <div class="row mx-3 justify-content-between">
-            <!--First Card-->
-            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem">
-                <img src="https://media.istockphoto.com/photos/hotel-room-suite-with-view-picture-id627892060?k=6&m=627892060&s=612x612&w=0&h=lVIi3QTDsZ1UDnMAjuy8ob9Zm6sBPCZ84x_e_OUl7Wk="
-                    class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Savrsen smestaj</h5>
-                    <p class="card-text">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </p>
-                </div>
-            </div>
-            <!--First Card-->
-            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem">
-                <img src="https://media.cntraveler.com/photos/5b22bfdff04a775484b99dfc/5:4/w_2810,h_2248,c_limit/Alo-Restaurant__2018_Raffi-Photo-2.jpg"
-                    class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Tradicionalnu hranu</h5>
-                    <p class="card-text">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </p>
-                </div>
-            </div>
-            <!--First Card-->
-            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem">
-                <img src="https://cocotravel.rs/wp-content/uploads/2019/03/GetImage.jpg" class="card-img-top"
-                    alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Spa & Wellnes</h5>
-                    <p class="card-text">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Form -->
-    <div class="background-form">
-        <div class="container">
-            <div class="row mx-3">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-4 mb-4">
-                    <h3>
-                        Pretplatite se na kako ne biste propustili najnovije akcije i
-                        ponude
-                    </h3>
-                </div>
-                <div class="form-input col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <input type="email" name="" id="" placeholder="Unesi Email" />
-                    <input type="submit" value="Prijavi se" class="pdl-4" />
-                </div>
-            </div>
-        </div>
-    </div>
+    @yield('content')
     <!-- Footer -->
     <div class="container">
         <footer class="text-center text-lg-start bg-light text-muted">

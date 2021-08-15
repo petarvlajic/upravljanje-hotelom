@@ -24,7 +24,8 @@ input {
 }
 
 .background {
-    background: url("https://imgur.com/rUyJsQg.jpg");
+    background: url("../images/hero.jpg");
+
     opacity: 1;
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,6 +70,10 @@ th {
 
 .card img {
     height: 100%;
+}
+
+.marginy {
+    margin: 150px 0px;
 }
 
 /*Semantic Tags*/
