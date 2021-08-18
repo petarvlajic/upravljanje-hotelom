@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--CSSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -19,7 +19,7 @@
 
 <body>
     <!--Header-->
-    <div class="background">
+    <div class="background ">
         <div class="container">
             <!--Navbar-->
             <nav class="navbar navbar-expand-lg text-white">
@@ -39,7 +39,7 @@
                 </div>
             </nav>
             <!--Hero-->
-            <div class="hero jumbotron text-center text-white">
+            <div class="hero jumbotron text-center text-white bg-transparent">
                 <h1 class="display-4">Dobro dosli u AG Hotel!</h1>
                 <p class="lead">
                     Proverite najbolji kvalitet i tradiciju koja traje 20 godina!
@@ -47,7 +47,7 @@
                 <hr class="my-4" />
 
                 <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Rezervisi odmah!</a>
+                    <a class="btn btn-primary btn-lg" href="{{route('dashboard')}}" role="button">Rezervisi odmah!</a>
                 </p>
             </div>
         </div>
@@ -113,12 +113,12 @@
         </div>
     </div>
     <!-- Footer -->
-    <div class="container">
+    
         <footer class="text-center text-lg-start bg-light text-muted">
             <!-- Section: Social media -->
             <section class="
             d-flex
-            justify-content-center justify-content-lg-between
+            justify-content-around 
             p-4
             border-bottom
           ">
@@ -216,7 +216,7 @@
             <!-- Copyright -->
         </footer>
         <!-- Footer -->
-    </div>
+    
 </body>
 
 </html>

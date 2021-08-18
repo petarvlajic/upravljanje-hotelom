@@ -23,6 +23,19 @@ input {
     padding: 0 25px;
 }
 
+.logout-btn{
+    background: none;
+    border: none;
+    color: #FFF;
+    padding: 0px;
+    cursor:pointer;
+    outline: none;
+}
+
+.logout-btn:focus{
+    outline: none;
+}
+
 .background {
     background: url("../images/hero.jpg");
 

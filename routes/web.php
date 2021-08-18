@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 // Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
-});
+})->name('dashboard')->middleware('auth');
 
 
 // Login Route

@@ -38,12 +38,22 @@
             @enderror
         </div>
 
-        <div class="mb-4">
+        <div class="mb-1">
             <div class="flex items-center">
                 <input type="checkbox" name="remember" id="remember" class="mr-2">
                 <label for="remember">Remember me</label>
             </div>
         </div>
+        <div class="form-group">
+                                   
+            <div style="font-size:13px;" class="mb-2">
+                Don't have an account! 
+            <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                Sign Up Here
+            </a>
+            </div>
+                                   
+                                    
 
         <div>
             <button class="btn btn-primary" type="submit">Login</button>

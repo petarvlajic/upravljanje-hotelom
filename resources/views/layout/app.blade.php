@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--CSSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -29,7 +28,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
+                    <div class="navbar-nav align-items-center">
                         <a class="nav-item nav-link text-white active" href="#">Home <span
                                 class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link text-white" href="/login">Login</a>
@@ -37,7 +36,7 @@
                         <form action="{{ route('logout')}}" method="post" class="inline p-3">
                             @csrf
 
-                            <button type="submit">Logout</button>
+                            <button type="submit" class="logout-btn">Logout</button>
                         </form>
                     </div>
                 </div>
@@ -47,12 +46,12 @@
     </div>
     @yield('content')
     <!-- Footer -->
-    <div class="container">
-        <footer class="text-center text-lg-start bg-light text-muted">
+    
+    <footer class="text-center text-lg-start bg-light text-muted">
             <!-- Section: Social media -->
             <section class="
             d-flex
-            justify-content-center justify-content-lg-between
+            justify-content-around 
             p-4
             border-bottom
           ">
@@ -150,7 +149,7 @@
             <!-- Copyright -->
         </footer>
         <!-- Footer -->
-    </div>
+    
 </body>
 
 </html>
