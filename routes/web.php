@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,6 +24,10 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 // Logout
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
+
+
+// Reservation
+Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation');
 
 
 Route::get('/', function () {

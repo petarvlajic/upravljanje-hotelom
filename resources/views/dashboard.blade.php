@@ -38,18 +38,19 @@
             </table>
         </div>
         <h3>Napravite novu rezervaciju:</h3>
-        <form class="px-5">
+        <form class="px-5" action="{{ route('reservation')}}" method="POST">
+			@csrf
 							<div class="row no-margin">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Check In</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" name="checkIn" type="date" required>
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Check Out</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" name="checkOut" type="date" required>
 									</div>
 								</div>
 							</div>
@@ -57,11 +58,11 @@
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Adults (18+)</span>
-										<select class="form-control">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
+										<select class="form-control" name="adults">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
 										</select>
 										<span class="select-arrow"></span>
 									</div>
@@ -69,10 +70,10 @@
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Children (0-17)</span>
-										<select class="form-control">
-											<option>0</option>
-											<option>1</option>
-											<option>2</option>
+										<select class="form-control" name="children">
+											<option value="0">0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
 										</select>
 										<span class="select-arrow"></span>
 									</div>
@@ -80,20 +81,20 @@
 							</div>
 							<div class="form-group">
 								<span class="form-label">Room Type</span>
-								<select class="form-control" required>
+								<select class="form-control" name="roomType" required>
 									<option value="" selected hidden>Select room type</option>
-									<option>Private Room (1 to 2 People)</option>
-									<option>Family Room (1 to 4 People)</option>
+									<option value="1 to 2 people">Private Room (1 to 2 People)</option>
+									<option value="1 to 4 people">Family Room (1 to 4 People)</option>
 								</select>
 								<span class="select-arrow"></span>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Email</span>
-								<input class="form-control" type="email" placeholder="Enter your email">
+								<input class="form-control" name="email" type="email" placeholder="Enter your email">
 							</div>
 							<div class="form-group">
 								<span class="form-label">Phone</span>
-								<input class="form-control" type="tel" placeholder="Enter your phone number">
+								<input class="form-control" name="phone" type="tel" placeholder="Enter your phone number">
 							</div>
 							<div class="form-btn">
 								<button class="btn btn-success font-weight-bold">Book Now</button>

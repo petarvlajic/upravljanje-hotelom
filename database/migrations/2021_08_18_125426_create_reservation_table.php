@@ -13,9 +13,9 @@ class CreateReservationTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservation', function (Blueprint $table) {
+        Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id');
             $table->timestamps();
             $table->date('checkIn');
             $table->date('checkOut');
@@ -24,6 +24,7 @@ class CreateReservationTable extends Migration
             $table->string('roomType');
             $table->string('email');
             $table->string('phone');
+            $table->string('status')->default('U obradi');
         });
     }
 
