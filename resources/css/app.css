@@ -71,5 +71,14 @@ th {
     height: 100%;
 }
 
+.logout-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0px;
+    cursor: pointer;
+    outline: none;
+}
+
 /*Semantic Tags*/
 /*# sourceMappingURL=style.css.map */

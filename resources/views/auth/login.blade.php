@@ -45,21 +45,23 @@
             </div>
         </div>
         <div class="form-group">
-                                   
-            <div style="font-size:13px;" class="mb-2">
-                Don't have an account! 
-            <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
-                Sign Up Here
-            </a>
-            </div>
-                                   
-                                    
 
-        <div>
-            <button class="btn btn-primary" type="submit">Login</button>
-        </div>
+            <div style="font-size:13px;" class="mb-2">
+                Don't have an account!
+                <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                    Sign Up Here
+                </a>
+            </div>
+
+
+
+            <div>
+                <button class="btn btn-primary" type="submit">Login</button>
+            </div>
 
 
     </form>
 </div>
+
+
 @endsection

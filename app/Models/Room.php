@@ -5,19 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-
-class Reservation extends Model
+class Room extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
-        'checkIn',
-        'user_id',
-        'checkOut',
-        'adults',
-        'children',
-        'roomType',
-        'name',
-        'phone'
+        'floor',
+        'bedNum',
+        'minibar',
+        'status',
     ];
 }

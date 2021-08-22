@@ -22,7 +22,7 @@ class CreateReservationTable extends Migration
             $table->integer('adults');
             $table->integer('children');
             $table->string('roomType');
-            $table->string('email');
+            $table->string('name');
             $table->string('phone');
             $table->string('status')->default('U obradi');
         });
