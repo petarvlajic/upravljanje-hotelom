@@ -25,6 +25,7 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 // Reservation
 Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation');
 Route::get('/dashboard', [ReservationController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('/dashboard/{id}', [ReservationController::class, 'delete'])->name('reservation.delete')->middleware('auth');
 
 // EditDashboard
 Route::get('/dashboard/edit', [EditDashboardController::class, 'index'])->name('editdashboard')->middleware('auth');
@@ -35,6 +36,7 @@ Route::get('/dashboard/edit/room/{id}/{status}', [EditDashboardController::class
 Route::get('/dashboard/edit/rooms', [RoomsController::class, 'index'])->name('rooms')->middleware('auth');
 Route::post('/dashboard/edit/rooms', [RoomsController::class, 'store'])->middleware('auth');
 Route::get('/dashboard/edit/rooms/status/{id}', [RoomsController::class, 'status'])->name('roomstatus')->middleware('auth');
+Route::get('/dashboard/edit/rooms/delete/{id}', [RoomsController::class, 'delete'])->name('room.delete')->middleware('auth');
 
 
 Route::get('/dashboard/edit/rooms/new', function(){

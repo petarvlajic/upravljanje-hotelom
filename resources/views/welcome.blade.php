@@ -30,11 +30,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link text-white active" href="#">Home <span
-                                class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link text-white" href="#">Features</a>
-                        <a class="nav-item nav-link text-white" href="#">Pricing</a>
-                        <a class="nav-item nav-link text-white disabled" href="#">Disabled</a>
+                        
+                        <a class="nav-item nav-link text-white" href="#">Sobe</a>
+                        <a class="nav-item nav-link text-white" href="#">O nama</a>
+                        <a class="nav-item nav-link text-white" href="#">Konakt</a>
+                        <a class="nav-item nav-link text-white" href="{{ route('login')}}">Prijavi se</a>
+                       
                     </div>
                 </div>
             </nav>
@@ -47,7 +48,7 @@
                 <hr class="my-4" />
 
                 <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="{{route('dashboard')}}" role="button">Rezervisi odmah!</a>
+                    <a class="btn btn-primary btn-lg font-weight-bold" href="{{route('dashboard')}}" role="button">Rezervisi odmah!</a>
                 </p>
             </div>
         </div>
@@ -58,7 +59,7 @@
         <hr class="my-4" />
         <div class="row mx-3 justify-content-between">
             <!--First Card-->
-            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem">
+            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem; padding: 0px">
                 <img src="https://media.istockphoto.com/photos/hotel-room-suite-with-view-picture-id627892060?k=6&m=627892060&s=612x612&w=0&h=lVIi3QTDsZ1UDnMAjuy8ob9Zm6sBPCZ84x_e_OUl7Wk="
                     class="card-img-top" alt="..." />
                 <div class="card-body">
@@ -70,7 +71,7 @@
                 </div>
             </div>
             <!--First Card-->
-            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem">
+            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem; padding: 0px">
                 <img src="https://media.cntraveler.com/photos/5b22bfdff04a775484b99dfc/5:4/w_2810,h_2248,c_limit/Alo-Restaurant__2018_Raffi-Photo-2.jpg"
                     class="card-img-top" alt="..." />
                 <div class="card-body">
@@ -82,7 +83,7 @@
                 </div>
             </div>
             <!--First Card-->
-            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem">
+            <div class="card text-center col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 18rem; padding: 0px">
                 <img src="https://cocotravel.rs/wp-content/uploads/2019/03/GetImage.jpg" class="card-img-top"
                     alt="..." />
                 <div class="card-body">
@@ -100,7 +101,7 @@
         <div class="container">
             <div class="row mx-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-4 mb-4">
-                    <h3>
+                    <h3 class="text-white font-weight-bold">
                         Pretplatite se na kako ne biste propustili najnovije akcije i
                         ponude
                     </h3>

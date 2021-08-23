@@ -39,4 +39,15 @@ class ReservationController extends Controller
 
         return redirect()->route('dashboard');
     }
+
+    public function delete($id)
+    {
+
+       $reservation = Reservation::find($id);
+
+       if ($reservation->user_id === auth()->user()->id && $reservation->status === 'U obradi') {
+           $reservation->delete();
+       }
+       return redirect()->route('dashboard');
+    }
 }

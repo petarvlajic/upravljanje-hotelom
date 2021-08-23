@@ -24,6 +24,7 @@
             $i=1;
             @endphp
 
+            @if(count($reservation) > 0)
             @foreach ($reservation as $reservations)
             <tr style="color: #000;font-weight:700;">
                 <th class="align-middle" scope="row">{{$i++}}</th>
@@ -39,6 +40,9 @@
 
             </tr>
             @endforeach
+            @else
+                <td colspan="9"><h5 class="text-success font-weight-bold text-center">Trenutno nemate rezervacije za obradu</h5></td>
+            @endif
 
         </tbody>
     </table>

@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container">
-    <h2 class="text-center">Dobro dosli <span class="text-primary">{{auth()->user()->name}}</span>!</h2>
+    <h2 class="text-center py-4">Dobro dosli <span class="text-primary">{{auth()->user()->name}}</span>!</h2>
 
 
 
 
     <div class="">
-        <h3>Vase rezervacije:</h3>
+        <h3 class="">Vase rezervacije:</h3>
         <table class="table table-striped px-5">
             <thead>
                 <tr>
@@ -28,14 +28,21 @@
                 @foreach ($reservation as $reservations)
                 <tr>
                     <th scope="row">{{$i++}}</th>
-                    <td>{{$reservations->checkIn}}</td>
-                    <td>{{$reservations->checkOut}}</td>
-                    <td>{{$reservations->adults}}</td>
-                    <td>{{$reservations->children}}</td>
-                    <td>{{$reservations->roomType}}</td>
-                    <td
-                        class="text-capitalize font-weight-bold @if($reservations->status==='U obradi') text-info @elseif($reservations->status==='prihvaceno') text-success @elseif($reservations->status==='odbijeno') text-danger @endif ">
+                    <td class="align-middle">{{$reservations->checkIn}}</td>
+                    <td class="align-middle">{{$reservations->checkOut}}</td>
+                    <td class="align-middle">{{$reservations->adults}}</td>
+                    <td class="align-middle">{{$reservations->children}}</td>
+                    <td class="align-middle">{{$reservations->roomType}}</td>
+                    <td 
+                        class="align-middle text-capitalize font-weight-bold @if($reservations->status==='U obradi') text-info @elseif($reservations->status==='prihvaceno') text-success @elseif($reservations->status==='odbijeno') text-danger @endif ">
                         {{$reservations->status}}
+                    </td>
+                    <td>
+                    @if($reservations->status === 'U obradi')
+                    <a href="{{ route('reservation.delete', $reservations->id)}}" class="btn btn-danger font-weight-bold border-rounded"><i class="fas fa-trash-alt"></i></a>
+                    @elseif($reservations->status === 'prihvaceno')
+                    <a href="" class="btn btn-info font-weight-bold border-rounded" style="padding: 6px 16px"><i class="fas fa-info"></i></a>
+                    @endif
                     </td>
                 </tr>
                 @endforeach

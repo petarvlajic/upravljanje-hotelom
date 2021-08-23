@@ -44,4 +44,11 @@ class RoomsController extends Controller
         return redirect()->route('rooms');
 
     }
+
+
+    public function delete($id)
+    {
+        Room::find($id)->delete();
+        return redirect()->route('rooms');
+    }
 }

@@ -13,6 +13,7 @@
                 <th scope="col">Mini bar</th>
                 <th scope="col">Status</th>
                 <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -33,6 +34,7 @@
                 @else
                 <td><a href="{{ route('roomstatus', $room->id) }}" class="btn btn-success font-weight-bold" type="submit">Oslobodi</a></td>
                 @endif
+                <td><a href="{{ route('room.delete', $room->id)}}" class="btn btn-danger font-weight-bold border-rounded"><i class="fas fa-trash-alt"></i></a></td>
 
             </tr>
             @endforeach
