@@ -33,8 +33,9 @@
                 <td class="align-middle text-center">{{$reservations->adults}}</td>
                 <td class="align-middle text-center">{{$reservations->children}}</td>
                 <td class="align-middle">{{$reservations->roomType}}</td>
-                <td><button class="btn btn-success font-weight-bold" type="submit">Prihvati</button></td>
-                <td><button class="btn btn-danger font-weight-bold" type="submit">Odbij</button></td>
+
+                <td><a href="{{ route('editdashboardstatus', ['id'=>$reservations->id,'status'=>'prihvaceno']) }}" class="btn btn-success font-weight-bold" type="submit">Prihvati</a></td>
+                <td><a href="{{ route('editdashboardstatus', ['id'=>$reservations->id,'status'=>'odbijeno']) }}" class="btn btn-danger font-weight-bold" type="submit">Odbij</a></td>
 
             </tr>
             @endforeach

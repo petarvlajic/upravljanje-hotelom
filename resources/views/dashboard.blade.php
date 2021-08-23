@@ -34,7 +34,7 @@
                     <td>{{$reservations->children}}</td>
                     <td>{{$reservations->roomType}}</td>
                     <td
-                        class=" @if($reservations->status==='U obradi') text-info @elseif($reservations->status==='prihvaceno') text-success @elseif($reservations->status==='odbijeno') text-danger @endif ">
+                        class="text-capitalize font-weight-bold @if($reservations->status==='U obradi') text-info @elseif($reservations->status==='prihvaceno') text-success @elseif($reservations->status==='odbijeno') text-danger @endif ">
                         {{$reservations->status}}
                     </td>
                 </tr>

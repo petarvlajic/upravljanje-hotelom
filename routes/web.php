@@ -28,10 +28,18 @@ Route::get('/dashboard', [ReservationController::class, 'index'])->name('dashboa
 
 // EditDashboard
 Route::get('/dashboard/edit', [EditDashboardController::class, 'index'])->name('editdashboard')->middleware('auth');
+Route::get('/dashboard/edit/room/{id}/{status}', [EditDashboardController::class, 'status'])->name('editdashboardstatus')->middleware('auth');
 
 
 // RoomsDashboard
 Route::get('/dashboard/edit/rooms', [RoomsController::class, 'index'])->name('rooms')->middleware('auth');
+Route::post('/dashboard/edit/rooms', [RoomsController::class, 'store'])->middleware('auth');
+Route::get('/dashboard/edit/rooms/status/{id}', [RoomsController::class, 'status'])->name('roomstatus')->middleware('auth');
+
+
+Route::get('/dashboard/edit/rooms/new', function(){
+    return view('addnewroom');
+})->name('newroom')->middleware('auth');
 
 
 

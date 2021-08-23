@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container py-5">
-    <h2 class="text-info font-weight-bold">U obradi:</h2>
+    <h2 class="text-info font-weight-bold">Sobe:</h2>
     <table class="table table-striped px-5 my-5">
         <thead>
             <tr>
@@ -25,13 +25,13 @@
                 <th class="align-middle" scope="row">{{$i++}}</th>
                 <td class="align-middle">{{$room->floor}}</td>
                 <td class="align-middle">{{$room->bedNum}}</td>
-                <td class="align-middle">{{$room->minibar}}</td>
-                <td class="align-start text-center">{{$room->status}}</td>
+                <td class="align-middle text-capitalize">{{$room->minibar}}</td>
+                <td class=" align-middle text-capitalize">{{$room->status}}</td>
 
                 @if($room->status==='slobodna')
-                <td><button class="btn btn-danger font-weight-bold" type="submit">Rezervisi</button></td>
+                <td><a href="{{ route('roomstatus', $room->id) }}" class="btn btn-danger font-weight-bold" type="submit">Rezervisi</a></td>
                 @else
-                <td><button class="btn btn-success font-weight-bold" type="submit">Oslobodi</button></td>
+                <td><a href="{{ route('roomstatus', $room->id) }}" class="btn btn-success font-weight-bold" type="submit">Oslobodi</a></td>
                 @endif
 
             </tr>
@@ -40,6 +40,9 @@
 
         </tbody>
     </table>
+
+
+    <a href="{{ route('newroom')}}" class="btn btn-success font-weight-bold"> Dodaj sobu </a>
 
 </div>
 

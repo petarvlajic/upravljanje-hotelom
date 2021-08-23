@@ -23,7 +23,7 @@
         <div class="container">
             <!--Navbar-->
             <nav class="navbar navbar-expand-lg text-white  ">
-                <a class="navbar-brand text-white" href="#">AG Hotel</a>
+                <a class="navbar-brand text-white" href="/">AG Hotel</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,6 +31,14 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav align-items-center">
 
+                        @auth
+                        @if(auth()->user()->role === 'editor')
+                        <a class="nav-item nav-link text-white" href="/dashboard/edit">Dashboard</a>
+                        <a class="nav-item nav-link text-white" href="/dashboard/edit/rooms">Sobe</a>
+                        <a class="nav-item nav-link text-white" href="/guests">Gosti</a>
+                        @endif
+                        @endauth
+                        
                         @guest
                         <a class="nav-item nav-link text-white" href="/login">Login</a>
                         <a class="nav-item nav-link text-white" href="/register">Register</a>
@@ -43,14 +51,10 @@
                                 style="background: none;border: none;color: #FFF;padding: 0px;cursor:pointer;outline: none;"
                                 class="logout-btn">Logout</button>
                         </form>
+                   
                     </div>
 
-                    @auth
-                    @if(auth()->user()->role === 'editor')
-                    <a class="nav-item nav-link text-white" href="/dashboard/edit/rooms">Sobe</a>
-                    <a class="nav-item nav-link text-white" href="/guests">Gosti</a>
-                    @endif
-                    @endauth
+                   
                 </div>
             </nav>
 

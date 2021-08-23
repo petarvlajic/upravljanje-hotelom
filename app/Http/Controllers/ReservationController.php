@@ -18,15 +18,13 @@ class ReservationController extends Controller
         }
 
         $id = auth()->user()->id;
-        $reservations = DB::select("SELECT * FROM `reservations` WHERE user_id = $id ");
-
+        $reservations =Reservation::where('user_id', $id)->get();
+    
         return view('dashboard', ['reservation' => $reservations]);
     }
 
     public function store(Request $request)
     {
-
-
 
         Reservation::create([
             'user_id' => auth()->user()->id,

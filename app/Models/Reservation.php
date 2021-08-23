@@ -17,6 +17,7 @@ class Reservation extends Model
         'adults',
         'children',
         'roomType',
+        'status',
         'name',
         'phone'
     ];

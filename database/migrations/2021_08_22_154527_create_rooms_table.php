@@ -19,6 +19,7 @@ class CreateRoomsTable extends Migration
             $table->integer('bedNum');
             $table->string('minibar');
             $table->string('status')->default('slobodna');
+            $table->timestamps();
         });
     }
 
